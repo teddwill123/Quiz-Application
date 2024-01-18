@@ -27,9 +27,12 @@
 
       <div id="questions" class="hide">
         <h2 id="question-title"></h2>
-        <div id="choices" class="choices"></div>
-        <audio id="correctSound" src="./assets/sfx/correct.wav"></audio>
-        <audio id="incorrectSound" src="./assets/sfx/incorrect.wav"></audio>
+        <div id="choices" class="choices">
+          <button id="answer-1" data-index="0"></button>  <!-- Button for answer 1 -->
+          <button id="answer-2" data-index="1"></button>  <!-- Button for answer 2 -->
+          <button id="answer-3" data-index="2"></button>  <!-- Button for answer 3 -->
+          <button id="answer-4" data-index="3"></button>  <!-- Button for answer 4 -->
+        </div>
       </div>
 
       <div id="end-screen" class="hide">
@@ -41,7 +44,9 @@
         </p>
       </div>
 
-      <div id="feedback" class="feedback hide"></div>
+      <div id="feedback" class="feedback hide">
+        <h3 id="feedback-alert"></h3>
+      </div>
     </div>
 
     <script src="./assets/js/questions.js"></script>
