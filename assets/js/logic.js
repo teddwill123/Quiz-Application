@@ -19,7 +19,7 @@ fourthAnswer.addEventListener("click", checkAnswer);
 startButton.addEventListener("click", startTheQuiz);           
 submitButton.addEventListener("click", saveScore);           
 
-// Defining a function which will start the quiz.
+// A function that initiates the quiz by starting it.
 function startTheQuiz () {
     timerCountdown();                                                           
     const startScreenDisplay = document.getElementById("start-screen");            
@@ -29,7 +29,7 @@ function startTheQuiz () {
     showQuestionsAndAnswers (timeLeft, quizQuestions[currentQuestionIndex]); 
 }
 
-// Defining a function which will countdown to 0 in 1 second increments.
+// A function that counts down from a specified time in 1-second increments.
 function timerCountdown () {
     var timeDeduct = setInterval(function() {                                       
 
@@ -47,7 +47,7 @@ function timerCountdown () {
     }, 1000);                                                                       
 }
 
-// Defining a function which will show the questions and answers.
+// A function that displays the questions and answer choices to the user.
 function showQuestionsAndAnswers (time, currentQuestionData) {
 
     const currentQuestionH2 = document.getElementById("question-title");            
@@ -63,7 +63,7 @@ function showQuestionsAndAnswers (time, currentQuestionData) {
     };
 }
 
-// Defining a function which will check if the answer the user chooses is correct or incorrect.
+// A function that checks if the user's selected answer is correct or incorrect.
 function checkAnswer (event) {
     const feedbackDiv = document.getElementById("feedback");                        
     feedbackDiv.classList.remove("hide");                                         
@@ -88,7 +88,7 @@ function checkAnswer (event) {
     showQuestionsAndAnswers (timeLeft, quizQuestions[currentQuestionIndex]);        
 }
 
-// Defining a function which will end the quiz.
+// A function that ends the quiz
 function endTheQuiz () {
     const questionDiv = document.getElementById("questions");                           
     questionDiv.classList.add("hide");                                                  
@@ -106,7 +106,7 @@ function endTheQuiz () {
     }, 700);                                                                           
 }
 
-// Defining a function which will save the users score in local storage.
+// A function that saves the user's score in the local storage.
 function saveScore () {
     var initialsInput = document.getElementById("initials");                       
     var initials = initialsInput.value;                                                   
